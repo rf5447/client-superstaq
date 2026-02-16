@@ -15,11 +15,9 @@
 from __future__ import annotations
 
 from collections.abc import Iterator
-
 import cirq
 import qiskit
 from qiskit.quantum_info import hellinger_fidelity
-
 from supermarq.benchmark import Benchmark
 
 
