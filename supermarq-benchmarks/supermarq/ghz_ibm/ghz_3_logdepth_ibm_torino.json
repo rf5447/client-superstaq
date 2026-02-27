@@ -1,0 +1,19 @@
+{
+  "benchmark": "GHZ",
+  "n_qubits": 3,
+  "method": "logdepth",
+  "backend": "ibm_torino",
+  "shots": 2000,
+  "job_id": "d69a8vpv6o8c73d7jp9g",
+  "timestamp": "2026-02-16 00:03:37.915074",
+  "counts": {
+    "111": 944,
+    "000": 980,
+    "011": 17,
+    "001": 7,
+    "101": 12,
+    "010": 7,
+    "110": 13,
+    "100": 20
+  }
+}

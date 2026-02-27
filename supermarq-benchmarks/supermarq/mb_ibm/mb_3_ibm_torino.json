@@ -1,0 +1,18 @@
+{
+  "benchmark": "MerminBell",
+  "n_qubits": 3,
+  "backend": "ibm_torino",
+  "shots": 2000,
+  "job_id": "d69b6plbujdc73d1vvbg",
+  "timestamp": "2026-02-16 01:04:30.059212",
+  "counts": {
+    "011": 26,
+    "100": 1851,
+    "000": 47,
+    "111": 40,
+    "110": 9,
+    "101": 19,
+    "001": 4,
+    "010": 4
+  }
+}

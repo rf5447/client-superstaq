@@ -1,0 +1,13 @@
+{
+  "benchmark": "GHZ",
+  "n_qubits": 3,
+  "method": "ladder",
+  "backend": "FakeBelemV2",
+  "shots": 2000,
+  "job_id": "442aa658-65e7-43c8-b025-5dbf21f58c98",
+  "timestamp": "2026-02-15 23:46:27.823193",
+  "counts": {
+    "000": 1018,
+    "111": 982
+  }
+}

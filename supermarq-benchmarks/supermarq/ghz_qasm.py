@@ -27,7 +27,7 @@
 # print("\n--- OpenQASM 3.0 ---")
 # print(qasm3_string)
 
-import converters
+from supermarq import converters
 import supermarq
 import cirq
 from qiskit import qasm2, qasm3, transpile
@@ -37,6 +37,7 @@ for n in [3, 4, 5, 7, 9]:
 
     try:
         circ_qiskit = converters.cirq_to_qiskit(circ)
+
          # new line for native gates
         circ_qiskit = transpile(circ_qiskit, basis_gates=['rx', 'rxx', 'rz'], optimization_level=3)
 
