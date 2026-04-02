@@ -1,4 +1,4 @@
-import converters
+from supermarq import converters
 import supermarq
 import cirq
 from qiskit import qasm2, qasm3, transpile

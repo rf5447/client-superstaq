@@ -1,0 +1,18 @@
+{
+  "benchmark": "HamiltonianSimulation",
+  "n_qubits": 4,
+  "ts": 4,
+  "tt": 4,
+  "backend": "ibm_fez",
+  "shots": 2000,
+  "job_id": "d6isd9860irc7393pomg",
+  "timestamp": "2026-03-02 12:20:37.445886",
+  "counts": {
+    "1111": 1943,
+    "1101": 14,
+    "0111": 10,
+    "1110": 17,
+    "1011": 15,
+    "0011": 1
+  }
+}

@@ -23,8 +23,8 @@ metadata_batches = {name: [] for name in backend_names}
 
 for nq in [4, 7, 11, 12, 13, 16, 20]:
     for steps in [1, 3, 4, 5, 7]:
-        ts = 1
-        tt = steps * ts
+        ts = steps #1
+        tt = 1 * ts
 
         # Hamiltonian Simulation circuit
         circ = supermarq.hamiltonian_simulation.HamiltonianSimulation(nq, ts, tt).circuit()
