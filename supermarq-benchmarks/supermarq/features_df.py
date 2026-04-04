@@ -49,8 +49,8 @@ title = 'Bit Code Updated'
 labels = []
 feature_vecs = []
 
-for nq in [3, 5]:
-    for nr in [2, 3]:
+for nq in [3, 4, 5, 7, 9]:
+    for nr in [2, 3, 4, 5, 7, 9]:
         print(f'{nq} data, {nr} rounds')
         labels.append(f'{nq} data, {nr} rounds')
         bit_state = [i % 2 for i in range(nq)]
@@ -73,12 +73,12 @@ feature_df.to_csv(f"{title.replace(' ', '_')}_features.csv")
 feature_df.to_pickle(f"{title.replace(' ', '_')}_features.pickle")
 
 # Make/save plot
-supermarq.plotting.plot_benchmark(
-    title,
-    labels,
-    feature_vecs,
-    spoke_labels=spoke_labels,
-    legend_loc=(1.05, 0.25),
-    savefn=f"{title.replace(' ', '_')}_nq5_nrSweep_df.png",
-    show=False,
-)
+# supermarq.plotting.plot_benchmark(
+#     title,
+#     labels,
+#     feature_vecs,
+#     spoke_labels=spoke_labels,
+#     legend_loc=(1.05, 0.25),
+#     savefn=f"{title.replace(' ', '_')}_nq5_nrSweep_df.png",
+#     show=False,
+# )
