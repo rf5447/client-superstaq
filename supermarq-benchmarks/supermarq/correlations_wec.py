@@ -1,48 +1,74 @@
 import pandas as pd
 from plotting_functions import heatmap, annotate_heatmap, regression_plot
+import collections
 
-# Load the dataframes from the data/ directory
-# feature_df: rows = benchmarks, columns = features
-# score_df: rows = devices, columns = benchmarks
-feature_df = pd.read_pickle('data/feature_dataframe.pickle')
-score_df = pd.read_pickle('data/benchmark_scores_dataframe.pickle')
+import supermarq
+import cirq
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.linear_model import LinearRegression
 
-# Create the correlation dataframes including the error-correction benchmarks
-correlation_wEC_df = pd.DataFrame(data=None, index=score_df.index, columns=feature_df.columns)
-correlation_wEC_df.head()
+# Load the dataframes
+feature_df = pd.read_pickle('./features/all_features_combined.pickle')
+score_df = pd.read_pickle('combined_benchmark_scores.pickle')
+
+# Make sure benchmark labels are the index of feature_df
+if 'Unnamed: 0' in feature_df.columns:
+    feature_df = feature_df.set_index('Unnamed: 0')
+elif feature_df.columns[0] not in ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']:
+    feature_df = feature_df.set_index(feature_df.columns[0])
+
+# Optional: ensure no accidental whitespace mismatch
+feature_df.index = feature_df.index.astype(str).str.strip()
+score_df.columns = score_df.columns.astype(str).str.strip()
+
+# Keep only feature columns
+feature_df = feature_df[['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']]
+
+# Create the correlation dataframe
+correlation_wEC_df = pd.DataFrame(index=score_df.index, columns=feature_df.columns, dtype=float)
 
 for feature in correlation_wEC_df.columns:
-    
-    application_features = feature_df.loc[:, feature]
-    
+    application_features = feature_df[feature]
+
     for device in correlation_wEC_df.index:
         scores = score_df.loc[device, :]
 
         x, y = [], []
         for benchmark in scores.index:
-            #if 'code' in benchmark:
-            #    continue
-            if isinstance(scores.loc[benchmark], tuple):
+            score_val = scores.loc[benchmark]
+
+            if pd.notna(score_val) and benchmark in application_features.index:
                 x.append(application_features.loc[benchmark])
-                y.append(scores.loc[benchmark][0])
+                y.append(score_val)
 
-        X = np.array(x)[:, np.newaxis]
-        Y = np.array(y)
-        model = LinearRegression().fit(X, Y)
-        correlation = model.score(X, Y)        
-        correlation_wEC_df.loc[device, feature] = correlation
-correlation_wEC_df.head()
+        if len(x) >= 2:
+            X = np.array(x).reshape(-1, 1)
+            Y = np.array(y)
 
-# Plot correlations INCLUDING error-correction Benchmarks
+            model = LinearRegression().fit(X, Y)
+            correlation_wEC_df.loc[device, feature] = model.score(X, Y)
+        else:
+            correlation_wEC_df.loc[device, feature] = np.nan
+
+# Plot correlations INCLUDING error-correction benchmarks
 fig, ax = plt.subplots(dpi=300)
 
-rows = ['AQT-4Q', 'IBM-\nCasablanca-7Q', 'IBM-\nGuadalupe-16Q', 'IonQ-11Q', 'IBM-Lagos-7Q', 'IBM-Montreal-27Q', 'IBM-Mumbai-27Q', 'IBM-Santiago-5Q', 'IBM-Toronto-27Q']
-cols = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD', 'Qubits', '2q-gates', 'Depth']
-subset_df = correlation_wEC_df.loc[:,[ 'Communication', 'Liveness', 'Parallelism', 'midMea', 'Entanglement', 'Depth', 'qubits', 'entangling-gates', 'regular-depth']]
-im, _ = heatmap(subset_df.to_numpy(dtype=float), rows, cols, ax=ax,
-                cmap="cool", vmin=0, vmax=0.5,
-                cbarlabel=r"Coefficient of Determination, $R^2$",
-                cbar_kw={'pad':0.01})
+rows = ['fez', 'marrakesh', 'torino']
+cols = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']
+subset_df = correlation_wEC_df.loc[rows, cols]
+
+im, _ = heatmap(
+    subset_df.to_numpy(dtype=float),
+    rows,
+    cols,
+    ax=ax,
+    cmap="cool",
+    vmin=0,
+    vmax=0.5,
+    cbarlabel=r"Coefficient of Determination, $R^2$",
+    cbar_kw={'pad': 0.01}
+)
 
 annotate_heatmap(im, size=7)
 
@@ -52,9 +78,10 @@ ax.annotate("", xy=(0.668, 1.06), xycoords='axes fraction',
 ax.annotate("", xy=(0.4, -0.028), xycoords='axes fraction',
             xytext=(0.47, -0.028), textcoords='axes fraction',
             arrowprops=dict(arrowstyle="->", connectionstyle="arc3"))
-ax.annotate('This work', (0.47,-0.04), xycoords='axes fraction', fontsize=8)
-ax.annotate('Typical features', (0.7,-0.04), xycoords='axes fraction', fontsize=8, horizontalalignment='left')
+ax.annotate('This work', (0.47, -0.04), xycoords='axes fraction', fontsize=8)
+ax.annotate('Typical features', (0.7, -0.04), xycoords='axes fraction',
+            fontsize=8, horizontalalignment='left')
 
 plt.tight_layout()
-plt.show()
+plt.savefig("correlations_wec_heatmap.png", dpi=300, bbox_inches="tight")
 plt.close()

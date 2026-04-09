@@ -45,8 +45,10 @@ else:
                 # 3. Calculate score
                 # The FSWAP proxy requires bitstring reversal to account for the SWAP network 
                 # mapping vs the standard measurement order.
-                # corrected_counts = {bitstr[::-1]: count for bitstr, count in counts.items()}
-                run_score = qaoa_benchmark.score(counts)
+                
+                # +1 is without this line, -1 is with
+                corrected_counts = {bitstr[::-1]: count for bitstr, count in counts.items()}
+                run_score = qaoa_benchmark.score(corrected_counts)
                 
                 # 4. Prepare the row for CSV
                 row = {

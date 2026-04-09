@@ -44,10 +44,11 @@ else:
                 qaoa_benchmark = supermarq.qaoa_vanilla_proxy.QAOAVanillaProxy(n_qubits)
                 
                 # Reverse each bitstring to convert Little-Endian (IBM) to Big-Endian (SupermarQ)
-                corrected_counts = {bitstr[::-1]: count for bitstr, count in counts.items()}
+                # +1 is without this line, -1 is with
+                # corrected_counts = {bitstr[::-1]: count for bitstr, count in counts.items()}
 
                 # 3. Calculate score
-                run_score = qaoa_benchmark.score(corrected_counts)
+                run_score = qaoa_benchmark.score(counts)
                 
                 # 4. Prepare the row for CSV
                 row = {
