@@ -57,30 +57,27 @@ fig, ax = plt.subplots(dpi=300)
 rows = ['fez', 'marrakesh', 'torino']
 cols = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']
 subset_df = correlation_wEC_df.loc[rows, cols]
+row_labels = ['IBM-Fez', 'IBM-Marrakesh', 'IBM-Torino']
 
 im, _ = heatmap(
     subset_df.to_numpy(dtype=float),
-    rows,
+    row_labels,
     cols,
     ax=ax,
     cmap="cool",
     vmin=0,
     vmax=0.5,
     cbarlabel=r"Coefficient of Determination, $R^2$",
-    cbar_kw={'pad': 0.01}
+    cbar_kw={'pad': 0.01, 'shrink': 0.5}
 )
 
 annotate_heatmap(im, size=7)
 
-ax.annotate("", xy=(0.668, 1.06), xycoords='axes fraction',
-            xytext=(0.668, -0.06), textcoords='axes fraction',
-            arrowprops=dict(arrowstyle="-", connectionstyle="arc3", color='r'))
-ax.annotate("", xy=(0.4, -0.028), xycoords='axes fraction',
-            xytext=(0.47, -0.028), textcoords='axes fraction',
-            arrowprops=dict(arrowstyle="->", connectionstyle="arc3"))
-ax.annotate('This work', (0.47, -0.04), xycoords='axes fraction', fontsize=8)
-ax.annotate('Typical features', (0.7, -0.04), xycoords='axes fraction',
-            fontsize=8, horizontalalignment='left')
+#ax.annotate("", xy=(0.668, 1.06), xycoords='axes fraction', xytext=(0.668, -0.06), textcoords='axes fraction', arrowprops=dict(arrowstyle="-", connectionstyle="arc3", color='r'))
+#ax.annotate("", xy=(0.4, -0.028), xycoords='axes fraction', xytext=(0.47, -0.028), textcoords='axes fraction', arrowprops=dict(arrowstyle="->", connectionstyle="arc3"))
+# ax.annotate('This work', (0.47, -0.04), xycoords='axes fraction', fontsize=8)
+# ax.annotate('Typical features', (0.7, -0.04), xycoords='axes fraction',
+#             fontsize=8, horizontalalignment='left')
 
 plt.tight_layout()
 plt.savefig("correlations_wec_heatmap.png", dpi=300, bbox_inches="tight")

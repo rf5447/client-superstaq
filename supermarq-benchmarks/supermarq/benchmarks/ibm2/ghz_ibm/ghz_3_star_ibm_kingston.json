@@ -1,0 +1,19 @@
+{
+  "benchmark": "GHZ",
+  "n_qubits": 3,
+  "method": "star",
+  "backend": "ibm_kingston",
+  "shots": 2000,
+  "job_id": "d7cog5r0g7hs73dr3t9g",
+  "timestamp": "2026-04-10 19:30:54.771426",
+  "counts": {
+    "000": 987,
+    "111": 960,
+    "110": 3,
+    "100": 8,
+    "101": 16,
+    "001": 4,
+    "011": 10,
+    "010": 12
+  }
+}

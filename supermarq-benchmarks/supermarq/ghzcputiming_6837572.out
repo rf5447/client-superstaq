@@ -1,0 +1,7 @@
+Running on node(s): della-i13n6
+della-i13n6
+/home/rf5447/client-superstaq/supermarq-benchmarks/supermarq/.venv/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+/bin/sh: line 1: nvidia-smi: command not found
+srun: Job step aborted: Waiting up to 47 seconds for job step to finish.
+[2026-04-10T21:21:20.372] error: *** JOB 6837572 ON della-i13n6 CANCELLED AT 2026-04-10T21:21:20 DUE to SIGNAL Terminated ***

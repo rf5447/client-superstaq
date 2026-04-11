@@ -1,0 +1,352 @@
++ module purge
++ local _mlredir=1
++ '[' -n '' ']'
++ case " $@ " in
++ '[' 1 -eq 0 ']'
++ _module_raw purge
+++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash purge
++ eval ''
++ _mlstatus=0
++ return 0
++ module load anaconda3/2024.10
++ local _mlredir=1
++ '[' -n '' ']'
++ case " $@ " in
++ '[' 1 -eq 0 ']'
++ _module_raw load anaconda3/2024.10
+++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash load anaconda3/2024.10
++ eval 'CONDA_PREFIX=/usr/licensed/anaconda3/2024.10; export CONDA_PREFIX;
+LOADEDMODULES=anaconda3/2024.10; export LOADEDMODULES;
+_LMFILES_=/usr/licensed/Modules/modulefiles/anaconda3/2024.10; export _LMFILES_;
+_CE_CONDA=; export _CE_CONDA;
+_CE_M=; export _CE_M;
+CONDA_EXE=/usr/licensed/anaconda3/2024.10/bin/conda; export CONDA_EXE;
+CONDA_PYTHON_EXE=/usr/licensed/anaconda3/2024.10/bin/python; export CONDA_PYTHON_EXE;
+CONDA_DEFAULT_ENV=base; export CONDA_DEFAULT_ENV;
+CONDA_PROMPT_MODIFIER=\(base\)\ ; export CONDA_PROMPT_MODIFIER;
+PATH=/usr/licensed/anaconda3/2024.10/bin:/usr/licensed/anaconda3/2024.10/condabin:/home/rf5447/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/rf5447/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/rf5447/.vscode-server/cli/servers/Stable-e7fb5e96c0730b9deb70b33781f98e2f35975036/server/bin/remote-cli:/home/rf5447/.local/bin:/home/rf5447/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/opt/dell/srvadmin/bin; export PATH;
+CONDA_SHLVL=1; export CONDA_SHLVL;
+__MODULES_LMREFRESH=anaconda3/2024.10; export __MODULES_LMREFRESH;
+GSETTINGS_SCHEMA_DIR=/usr/licensed/anaconda3/2024.10/share/glib-2.0/schemas; export GSETTINGS_SCHEMA_DIR;
+__conda_hashr () { if [ -n "${ZSH_VERSION:+x}" ]; then
+        \rehash
+    elif [ -n "${POSH_VERSION:+x}" ]; then
+        :  # pass
+    else
+        \hash -r
+    fi; }; export -f __conda_hashr;
+__conda_exe () { ( "$CONDA_EXE" $_CE_M $_CE_CONDA "$@" ); }; export -f __conda_exe;
+conda () { \local cmd="${1-__missing__}";
+    case "$cmd" in
+        activate|deactivate)
+            __conda_activate "$@";
+            ;;
+        install|update|upgrade|remove|uninstall)
+            __conda_exe "$@" || \return;
+            __conda_reactivate;
+            ;;
+        *)
+             __conda_exe "$@";
+            ;;
+    esac; }; export -f conda;
+__conda_reactivate () { \local ask_conda
+    ask_conda="$(PS1="${PS1:-}" __conda_exe shell.posix reactivate)" || \return;
+    \eval "$ask_conda"
+    __conda_hashr; }; export -f __conda_reactivate;
+__conda_activate () { if [ -n "${CONDA_PS1_BACKUP:+x}" ]; then
+        # Handle transition from shell activated with conda <= 4.3 to a subsequent activation
+        # after conda updated to >= 4.4. See issue #6173.
+        PS1="$CONDA_PS1_BACKUP"
+        \unset CONDA_PS1_BACKUP
+    fi
+
+    \local ask_conda
+    ask_conda="$(PS1="${PS1:-}" __conda_exe shell.posix "$@")" || \return;
+    \eval "$ask_conda"
+    __conda_hashr; }; export -f __conda_activate;
+export _LOCAL_OLD_PS1="${PS1}"
+export PS1="(base) ${PS1}"
+test 0;'
+++ CONDA_PREFIX=/usr/licensed/anaconda3/2024.10
+++ export CONDA_PREFIX
+++ LOADEDMODULES=anaconda3/2024.10
+++ export LOADEDMODULES
+++ _LMFILES_=/usr/licensed/Modules/modulefiles/anaconda3/2024.10
+++ export _LMFILES_
+++ _CE_CONDA=
+++ export _CE_CONDA
+++ _CE_M=
+++ export _CE_M
+++ CONDA_EXE=/usr/licensed/anaconda3/2024.10/bin/conda
+++ export CONDA_EXE
+++ CONDA_PYTHON_EXE=/usr/licensed/anaconda3/2024.10/bin/python
+++ export CONDA_PYTHON_EXE
+++ CONDA_DEFAULT_ENV=base
+++ export CONDA_DEFAULT_ENV
+++ CONDA_PROMPT_MODIFIER='(base) '
+++ export CONDA_PROMPT_MODIFIER
+++ PATH=/usr/licensed/anaconda3/2024.10/bin:/usr/licensed/anaconda3/2024.10/condabin:/home/rf5447/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/rf5447/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/rf5447/.vscode-server/cli/servers/Stable-e7fb5e96c0730b9deb70b33781f98e2f35975036/server/bin/remote-cli:/home/rf5447/.local/bin:/home/rf5447/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/puppetlabs/bin:/opt/dell/srvadmin/bin
+++ export PATH
+++ CONDA_SHLVL=1
+++ export CONDA_SHLVL
+++ __MODULES_LMREFRESH=anaconda3/2024.10
+++ export __MODULES_LMREFRESH
+++ GSETTINGS_SCHEMA_DIR=/usr/licensed/anaconda3/2024.10/share/glib-2.0/schemas
+++ export GSETTINGS_SCHEMA_DIR
+++ export -f __conda_hashr
+++ export -f __conda_exe
+++ export -f conda
+++ export -f __conda_reactivate
+++ export -f __conda_activate
+++ export _LOCAL_OLD_PS1=
+++ _LOCAL_OLD_PS1=
+++ export 'PS1=(base) '
+++ PS1='(base) '
+++ test 0
++ _mlstatus=0
++ return 0
++ echo 'Running on node(s): della-h12n18'
+Running on node(s): della-h12n18
++ hostname
+della-h12n18
++ pwd
+/home/rf5447/client-superstaq/supermarq-benchmarks/supermarq
++ date
+Fri Apr 10 10:02:35 PM EDT 2026
++ ls
+benchmark.py
+benchmarks
+benchmark_scores_dataframe.csv
+benchmark_scores_dataframe.pickle
+benchmark_test.py
+bitcode_bar_charts.png
+bitcode_benchmark_results.csv
+bitcode_by_qubits.png
+bitcode_by_rounds.png
+bitcode_correlation_heatmap_ec.png
+bitcode_correlation_heatmap_no_ec.png
+bitcode_correlation_heatmap.png
+bitcode_graphing.py
+bitcode_ibm.py
+Bit_Code_Mid-Circuit_Measurements_nq5_nrSweep.png
+bitcode_performance_comparison.png
+bitcode_qasm
+bitcode_qasm.py
+Bit_Code_Scaling_1_nr2.png
+Bit_Code_Scaling_2_nr3.png
+Bit_Code_Scaling_3_nq3_nrSweep.png
+Bit_Code_Scaling_4_nq5_nrSweep.png
+Bit_Code_Scaling,_Varying_Number_of_Qubits,_Fixing_Number_of_Rounds_=_2_nr2.png
+Bit_Code_Scaling,_Varying_Number_of_Qubits,_Fixing_Number_of_Rounds_=_3_nr3.png
+Bit_Code_Scaling,_Varying_Number_of_Rounds,_Fixing_Number_of_Qubits_=_3_nq3_nrSweep.png
+Bit_Code_Scaling,_Varying_Number_of_Rounds,_Fixing_Number_of_Qubits_=_5_nq5_nrSweep.png
+bitcode_scoring.py
+Bit_Code_Updated_features.csv
+Bit_Code_Updated_features.pickle
+Bit_Code_Updated_nq5_nrSweep_df.png
+Bit_Code_Updated_nq5_nrSweep.png
+combined_benchmark_scores.csv
+combined_benchmark_scores.pickle
+combined_features_df.py
+converters
+correlations.py
+correlations_test.py
+correlations_wec copy.py
+correlations_wec_heatmap.png
+correlations_wec.py
+correlations_woec_heatmap.png
+correlations_woec.py
+credentials.py
+example_5214670.out
+feature_dataframe.csv
+feature_dataframe.pickle
+features
+features_df.py
+features.py
+features_test.py
+fswap_bar_charts1orig.png
+fswap_bar_charts+1.png
+fswap_bar_charts-1.png
+fswap_bar_chartsorig.png
+fswap_graphing.py
+fswap_ibm.py
+fswap_performance_line1.png
+fswap_performance_line.png
+fswap_qaoa_benchmark_results+1.csv
+fswap_qaoa_benchmark_results-1.csv
+fswap_qaoa_benchmark_resultsorig copy.csv
+fswap_qasm
+fswap_qasm.py
+fswap_scoring.py
+ghz_3_ladder_FakeBelemV2.json
+ghz_bar_charts.png
+ghz_benchmark_results.csv
+ghzcputiming_6837551.out
+ghzcputiming_6837572.out
+ghzcputiming_6837575.out
+ghzcputiming_6837657.out
+ghzcputiming_6838109.out
+ghzcputiming_6838463.out
+ghzcputiming_noslurm_out.txt
+ghzcputiming.py
+ghzcputiming.slurm
+ghz_graphing.py
+ghz_ibm.py
+ghz_ibmsim.py
+GHZ_Original.png
+ghz_performance_comparison.png
+ghz_qasm
+ghz_qasm.py
+GHZ_Scaling.png
+ghz_scoring.py
+ghz_timing_results.csv
+hamiltonian_performance.png
+hamsim_2x4_clean.png
+hamsim_2x4_grid.png
+hamsim_bar_charts.png
+hamsim_benchmark_results.csv
+hamsim_combined_benchmarks.png
+hamsim_graphing.py
+hamsim_ibm.py
+hamsim_performance.png
+hamsim_qasm
+hamsim_qasm_correct.py
+hamsim_qasm.py
+hamsim_scoring.py
+__init__.py
+mb_bar_charts1.png
+mb_bar_charts.png
+mb_bar_charts_with_limits.png
+mb_benchmark_results copy.csv
+mb_benchmark_results.csv
+mb_debug.py
+mb_graphing.py
+mb_ibm.py
+mb_out_5215516.log
+mb_performance_comparison1.png
+mb_performance_comparison.png
+mb_qasm
+mb_qasm.py
+mb_scoring_5214742.out
+mb_scoring.py
+mb_scoring.slurm
+Mermin-Bell_Original.png
+mermin_bell_scaling.png
+mermin_bell_updated.png
+new_features_old.py
+new_features.py
+phasecode_bar_charts.png
+phase_code_benchmark_results.csv
+phasecode_benchmark_results.csv
+phasecode_by_qubits.png
+phasecode_by_rounds.png
+phasecode_graphing.py
+phasecode_ibm.py
+Phase_Code_Mid-Circuit_Measurements_nr2.png
+phasecode_performance_comparison.png
+phasecode_qasm
+phasecode_qasm.py
+Phase_Code_Scaling_1_nr2.png
+Phase_Code_Scaling_2_nr3.png
+Phase_Code_Scaling_3_nq3_nrSweep.png
+Phase_Code_Scaling_4_nq5_nrSweep.png
+Phase_Code_Scaling,_Varying_Number_of_Qubits,_Fixing_Number_of_Rounds_=_2_nr2.png
+Phase_Code_Scaling,_Varying_Number_of_Qubits,_Fixing_Number_of_Rounds_=_3_nr3.png
+Phase_Code_Scaling,_Varying_Number_of_Rounds,_Fixing_Number_of_Qubits_=_3_nq3_nrSweep.png
+Phase_Code_Scaling,_Varying_Number_of_Rounds,_Fixing_Number_of_Qubits_=_5_nq5_nrSweep.png
+phasecode_scoring.py
+Phase_Code_Updated_nr2.png
+pickletocsv.py
+plotting_functions.py
+plotting.py
+plotting_test.py
+__pycache__
+py.typed
+qcvv
+run.py
+scores_df.py
+simulation.py
+stabilizers.py
+testibm.py
+testibm_results.png
+testibm_results_sim.png
+testibmsim.py
+vanilla_bar_charts+1.png
+vanilla_bar_charts-1.png
+vanilla_bar_charts copy.png
+vanilla_graphing.py
+vanilla_ibm.py
+vanilla_performance_line.png
+vanilla_qaoa_benchmark_results+1.csv
+vanilla_qaoa_benchmark_results-1.csv
+vanilla_qaoa_benchmark_results orig.csv
+vanilla_qaoa_performance.png
+vanilla_qasm
+vanilla_qasm.py
+vanilla_scoring.py
+venv_superstaq
+_version.py
+_version_test.py
+vqe_graphing.py
+vqeproxy_benchmark_results.csv
+vqeproxy_by_layers.png
+vqeproxy_by_qubits.png
+vqeproxy_combined_bar_chart.png
+vqeproxy_combined_results.png
+vqeproxy_ibm.py
+vqeproxy_qasm
+vqeproxy_qasm.py
+vqe_scoring.py
++ ls -l ./.venv/bin/python3
+lrwxrwxrwx 1 rf5447 cs 16 Dec  8 22:36 ./.venv/bin/python3 -> /usr/bin/python3
++ ls -l ghzcputiming.py
+-rw-r--r-- 1 rf5447 cs 4252 Apr 10 21:52 ghzcputiming.py
++ ./.venv/bin/python3 -u ghzcputiming.py
+/home/rf5447/client-superstaq/supermarq-benchmarks/supermarq/.venv/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+============================================================
+Hardware / job environment info
+============================================================
+Hostname: della-h12n18
+SLURM job ID: 6838463
+SLURM node list: della-h12n18
+CPU: Intel(R) Xeon(R) Platinum 8480+
+============================================================
+
+method = star, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 2876.24 ms | score time: 0.03 ms
+  With 0.5% error probability, GHZ score = 0.9697 | sim time: 2848.61 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.8998 | sim time: 2843.99 ms | score time: 0.02 ms
+
+method = star, num_qubits = 4
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 4596.08 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9370 | sim time: 4761.43 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8170 | sim time: 4660.66 ms | score time: 0.02 ms
+
+method = star, num_qubits = 5
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 6821.00 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9160 | sim time: 6787.61 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7375 | sim time: 6713.17 ms | score time: 0.03 ms
+
+method = star, num_qubits = 6
+  With 0.0% error probability, GHZ score = 0.9993 | sim time: 9240.29 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8879 | sim time: 9278.49 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.6190 | sim time: 9440.76 ms | score time: 0.03 ms
+
+method = star, num_qubits = 7
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 12325.52 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8494 | sim time: 12316.00 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5508 | sim time: 12315.39 ms | score time: 0.03 ms
+
+method = star, num_qubits = 8
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 15586.58 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8003 | sim time: 15559.92 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.4408 | sim time: 15710.68 ms | score time: 0.04 ms
+
+method = star, num_qubits = 9
+  With 0.0% error probability, GHZ score = 0.9998 | sim time: 19727.69 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7660 | sim time: 19604.49 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.3810 | sim time: 19698.53 ms | score time: 0.05 ms
+
+method = star, num_qubits = 10
+[2026-04-10T22:06:43.964] error: *** JOB 6838463 ON della-h12n18 CANCELLED AT 2026-04-10T22:06:43 DUE to SIGNAL Terminated ***

@@ -1,0 +1,19 @@
+{
+  "benchmark": "GHZ",
+  "n_qubits": 3,
+  "method": "logdepth",
+  "backend": "ibm_fez",
+  "shots": 2000,
+  "job_id": "d7cofo15a5qc73dp0p40",
+  "timestamp": "2026-04-10 19:30:05.981120",
+  "counts": {
+    "000": 989,
+    "111": 882,
+    "100": 51,
+    "101": 4,
+    "011": 51,
+    "110": 14,
+    "001": 4,
+    "010": 5
+  }
+}

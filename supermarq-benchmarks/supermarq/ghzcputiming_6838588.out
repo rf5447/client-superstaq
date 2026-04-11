@@ -1,0 +1,64 @@
+/home/rf5447/client-superstaq/supermarq-benchmarks/supermarq/.venv/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+============================================================
+Hardware / job environment info
+============================================================
+Hostname: della-i13n5
+SLURM job ID: 6838588
+SLURM node list: della-i13n5
+CPU: Intel(R) Xeon(R) Gold 6242R CPU @ 3.10GHz
+============================================================
+
+method = star, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9998 | sim time: 5056.67 ms | score time: 0.03 ms
+  With 0.5% error probability, GHZ score = 0.9838 | sim time: 5039.20 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.9120 | sim time: 5041.48 ms | score time: 0.02 ms
+
+method = star, num_qubits = 4
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 8041.82 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9470 | sim time: 8033.34 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8367 | sim time: 8062.27 ms | score time: 0.02 ms
+
+method = star, num_qubits = 5
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 11827.22 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9229 | sim time: 11765.97 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7260 | sim time: 11823.66 ms | score time: 0.03 ms
+
+method = star, num_qubits = 6
+  With 0.0% error probability, GHZ score = 0.9990 | sim time: 16259.40 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9030 | sim time: 16225.41 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.6299 | sim time: 16217.67 ms | score time: 0.03 ms
+
+method = star, num_qubits = 7
+  With 0.0% error probability, GHZ score = 0.9990 | sim time: 21391.97 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8670 | sim time: 21412.73 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5430 | sim time: 21454.41 ms | score time: 0.03 ms
+
+method = star, num_qubits = 8
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 27487.17 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8145 | sim time: 27362.89 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.4470 | sim time: 27472.05 ms | score time: 0.04 ms
+
+method = star, num_qubits = 9
+  With 0.0% error probability, GHZ score = 0.9981 | sim time: 34271.68 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7859 | sim time: 34104.05 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.3899 | sim time: 34267.59 ms | score time: 0.06 ms
+
+method = star, num_qubits = 10
+  With 0.0% error probability, GHZ score = 0.9997 | sim time: 41861.32 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7329 | sim time: 41770.95 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.2870 | sim time: 41600.29 ms | score time: 0.06 ms
+
+method = ladder, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9998 | sim time: 5120.27 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9738 | sim time: 5091.65 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.9030 | sim time: 5062.91 ms | score time: 0.02 ms
+
+method = ladder, num_qubits = 4
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 8167.68 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9559 | sim time: 8157.09 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8310 | sim time: 8175.22 ms | score time: 0.02 ms
+
+method = ladder, num_qubits = 5
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 11860.67 ms | score time: 0.02 ms
+[2026-04-10T22:19:46.068] error: *** JOB 6838588 ON della-i13n5 CANCELLED AT 2026-04-10T22:19:46 DUE TO TIME LIMIT ***

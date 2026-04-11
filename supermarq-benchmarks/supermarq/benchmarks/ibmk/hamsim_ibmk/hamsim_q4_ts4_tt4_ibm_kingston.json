@@ -1,0 +1,18 @@
+{
+  "benchmark": "HamiltonianSimulation",
+  "n_qubits": 4,
+  "ts": 4,
+  "tt": 4,
+  "backend": "ibm_kingston",
+  "shots": 2000,
+  "job_id": "d7cp0115a5qc73dp19c0",
+  "timestamp": "2026-04-10 20:04:45.234570",
+  "counts": {
+    "1111": 1936,
+    "1011": 23,
+    "0111": 17,
+    "1101": 11,
+    "1110": 12,
+    "1010": 1
+  }
+}

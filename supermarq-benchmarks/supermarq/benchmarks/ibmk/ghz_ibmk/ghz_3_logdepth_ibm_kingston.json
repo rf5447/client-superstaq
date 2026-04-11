@@ -1,0 +1,19 @@
+{
+  "benchmark": "GHZ",
+  "n_qubits": 3,
+  "method": "logdepth",
+  "backend": "ibm_kingston",
+  "shots": 2000,
+  "job_id": "d7cosse5nvhs73a4spvg",
+  "timestamp": "2026-04-10 19:58:02.162450",
+  "counts": {
+    "111": 877,
+    "000": 997,
+    "010": 10,
+    "110": 74,
+    "001": 15,
+    "100": 10,
+    "011": 11,
+    "101": 6
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "benchmark": "GHZ",
+  "n_qubits": 3,
+  "method": "star",
+  "backend": "ibm_marrakesh",
+  "shots": 2000,
+  "job_id": "d7cofvh5a5qc73dp0pd0",
+  "timestamp": "2026-04-10 19:30:30.611523",
+  "counts": {
+    "111": 932,
+    "000": 995,
+    "101": 13,
+    "110": 7,
+    "010": 14,
+    "011": 19,
+    "100": 20
+  }
+}

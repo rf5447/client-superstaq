@@ -9,11 +9,11 @@ import os
 
 service = QiskitRuntimeService()
 # You can now uncomment these and it will create 3 jobs
-backend_names = ["ibm_fez", "ibm_marrakesh", "ibm_torino"]
+backend_names = ["ibm_kingston"]#["ibm_fez", "ibm_marrakesh", "ibm_kingston"]
 SHOTS = 2000
 
 # Ensure the output directory exists
-# os.makedirs("ghz_ibm", exist_ok=True)
+os.makedirs("ghz_ibm", exist_ok=True)
 
 # 1. Organize circuits by backend
 # Structure: { "backend_name": [list_of_transpiled_circs], ... }
@@ -21,7 +21,7 @@ backend_batches = {name: [] for name in backend_names}
 # To keep track of n and method for the filenames later
 metadata_batches = {name: [] for name in backend_names}
 
-for n in [15, 20, 30, 40]: #[11, 25, 50, 75, 100, 125]: # alr ran 3, 4, 5, 7
+for n in [3, 4, 5, 7, 11, 25, 50, 75, 100, 125]: #[15, 20, 30, 40]: #[11, 25, 50, 75, 100, 125]: # alr ran 3, 4, 5, 7
     for method in ["ladder", "star", "logdepth"]:
         circ = supermarq.ghz.GHZ(n, method).circuit()
         

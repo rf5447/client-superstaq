@@ -9,11 +9,11 @@ import os
 
 service = QiskitRuntimeService()
 # You can now uncomment these and it will create 3 jobs
-backend_names = ["ibm_fez", "ibm_torino", "ibm_marrakesh"]
+backend_names = ["ibm_kingston"]#["ibm_fez", "ibm_marrakesh", "ibm_kingston"]
 SHOTS = 2000
 
 # Ensure the output directory exists
-# os.makedirs("bitcode_ibm", exist_ok=True)
+os.makedirs("bitcode_ibm", exist_ok=True)
 
 # 1. Organize circuits by backend
 # Structure: { "backend_name": [list_of_transpiled_circs], ... }

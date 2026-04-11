@@ -9,7 +9,7 @@ import os
 
 service = QiskitRuntimeService()
 # You can now uncomment these and it will create 3 jobs
-backend_names = ["ibm_marrakesh"] #["ibm_fez", "ibm_torino", "ibm_marrakesh"]
+backend_names = ["ibm_kingston"]#["ibm_fez", "ibm_marrakesh", "ibm_kingston"]
 SHOTS = 2000
 
 # Ensure the output directory exists

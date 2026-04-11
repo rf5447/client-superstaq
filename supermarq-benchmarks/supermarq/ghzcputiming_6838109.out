@@ -1,0 +1,6 @@
+Running on node(s): della-i13n16
+della-i13n16
+/home/rf5447/client-superstaq/supermarq-benchmarks/supermarq/.venv/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+[2026-04-10T21:51:16.008] error: *** JOB 6838109 ON della-i13n16 CANCELLED AT 2026-04-10T21:51:16 DUE TO TIME LIMIT ***
+[2026-04-10T21:51:16.016] error: *** STEP 6838109.0 ON della-i13n16 CANCELLED AT 2026-04-10T21:51:16 DUE TO TIME LIMIT ***

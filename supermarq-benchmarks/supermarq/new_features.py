@@ -693,3 +693,34 @@ supermarq.plotting.plot_benchmark(
 # #     show=False,
 # # )
 
+for nq in [4, 7, 9]:
+    for nl in [1, 2, 3, 4, 5]:
+        labels.append(f'vqe_{nq}qubits_{nl}layers')
+
+        res = vqe_proxy.VQEProxy(nq, nl).circuit()
+
+        # VQE returns [z_circuit, x_circuit]
+        if isinstance(res, (list, tuple)):
+            circuits = list(res)
+        elif isinstance(res, dict) and "circuit" in res:
+            circuits = res["circuit"]
+            if not isinstance(circuits, (list, tuple)):
+                circuits = [circuits]
+        else:
+            circuits = [res]
+
+        # compute features for each circuit, then average across the benchmark
+        per_circuit_features = []
+        for circ in circuits:
+            con = supermarq.features.compute_communication(circ)
+            liv = supermarq.features.compute_liveness(circ)
+            par = supermarq.features.compute_parallelism(circ)
+            mea = supermarq.features.compute_measurement(circ)
+            ent = supermarq.features.compute_entanglement(circ)
+            dep = supermarq.features.compute_depth(circ)
+            per_circuit_features.append([con, liv, par, mea, ent, dep])
+
+        avg_features = np.mean(per_circuit_features, axis=0)
+        feature_vecs.append(avg_features)
+
+spoke_labels = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']

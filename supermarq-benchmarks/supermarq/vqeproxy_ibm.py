@@ -8,7 +8,7 @@ from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2
 import os
 
 service = QiskitRuntimeService()
-backend_names = ["ibm_marrakesh"] #["ibm_fez", "ibm_torino", "ibm_marrakesh"]
+backend_names = ["ibm_kingston"]#["ibm_fez", "ibm_marrakesh", "ibm_kingston"]
 SHOTS = 2000
 
 # Ensure the output directory exists
