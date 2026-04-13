@@ -42,7 +42,6 @@ for feature in correlation_woEC_df.columns:
             if 'code' in benchmark:
                 continue
 
-            # keep only valid scalar scores that also exist in feature_df
             if pd.notna(score_val) and benchmark in application_features.index:
                 x.append(application_features.loc[benchmark])
                 y.append(score_val)
@@ -56,15 +55,15 @@ for feature in correlation_woEC_df.columns:
         else:
             correlation_woEC_df.loc[device, feature] = np.nan
 
-# Plot correlations EXCLUDING error-correction benchmarks
+# Plot correlations EXCLUDING error-correction benchmarks (WITH TORINO)
 fig, ax = plt.subplots(dpi=300)
 
-rows = ['fez', 'marrakesh', 'torino']
+rows = ['torino', 'fez', 'kingston', 'marrakesh']
 cols = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']
 subset_df = correlation_woEC_df.loc[rows, cols]
-row_labels = ['IBM-Fez', 'IBM-Marrakesh', 'IBM-Torino']
+row_labels = ['IBM-Torino', 'IBM-Fez', 'IBM-Kingston', 'IBM-Marrakesh']
 
-im, _ = heatmap(
+im, cbar = heatmap(
     subset_df.to_numpy(dtype=float),
     row_labels,
     cols,
@@ -76,14 +75,42 @@ im, _ = heatmap(
     cbar_kw={'pad': 0.01, 'shrink': 0.5}
 )
 
-annotate_heatmap(im, size=7)
-
-#ax.annotate("", xy=(0.668, 1.06), xycoords='axes fraction', xytext=(0.668, -0.06), textcoords='axes fraction', arrowprops=dict(arrowstyle="-", connectionstyle="arc3", color='r'))
-#ax.annotate("", xy=(0.4, -0.028), xycoords='axes fraction', xytext=(0.47, -0.028), textcoords='axes fraction', arrowprops=dict(arrowstyle="->", connectionstyle="arc3"))
-# ax.annotate('This work', (0.47, -0.04), xycoords='axes fraction', fontsize=8)
-# ax.annotate('Typical features', (0.7, -0.04), xycoords='axes fraction',
-#             fontsize=8, horizontalalignment='left')
+# +4 pt everywhere
+ax.tick_params(axis='both', labelsize=11)
+cbar.ax.tick_params(labelsize=11)
+cbar.set_label(r"Coefficient of Determination, $R^2$", size=11)
+annotate_heatmap(im, size=11)
 
 plt.tight_layout()
 plt.savefig("correlations_woec_heatmap.png", dpi=300, bbox_inches="tight")
+plt.close()
+
+# Plot correlations EXCLUDING error-correction benchmarks (WITHOUT TORINO)
+fig, ax = plt.subplots(dpi=300)
+
+rows = ['fez', 'kingston', 'marrakesh']
+cols = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']
+subset_df = correlation_woEC_df.loc[rows, cols]
+row_labels = ['IBM-Fez', 'IBM-Kingston', 'IBM-Marrakesh']
+
+im, cbar = heatmap(
+    subset_df.to_numpy(dtype=float),
+    row_labels,
+    cols,
+    ax=ax,
+    cmap="cool",
+    vmin=0,
+    vmax=0.5,
+    cbarlabel=r"Coefficient of Determination, $R^2$",
+    cbar_kw={'pad': 0.01, 'shrink': 0.5}
+)
+
+# +4 pt everywhere
+ax.tick_params(axis='both', labelsize=11)
+cbar.ax.tick_params(labelsize=11)
+cbar.set_label(r"Coefficient of Determination, $R^2$", size=11)
+annotate_heatmap(im, size=11)
+
+plt.tight_layout()
+plt.savefig("correlations_woec_heatmap_no_torino.png", dpi=300, bbox_inches="tight")
 plt.close()

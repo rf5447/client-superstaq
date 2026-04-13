@@ -6,14 +6,14 @@ import pandas as pd
 # ------------------------------------------------------------
 
 INPUT_FILES = [
-    "ghz_benchmark_results.csv",
-    "mb_benchmark_results.csv",
-    "bitcode_benchmark_results.csv",
-    "phasecode_benchmark_results.csv",
-    "hamsim_benchmark_results.csv",
-    "vqeproxy_benchmark_results.csv",
-    "vanilla_qaoa_benchmark_results-1.csv",
-    "fswap_qaoa_benchmark_results-1.csv",
+    "benchmark_results_combined/ghz_benchmark_results_combined.csv",
+    "benchmark_results_combined/mb_benchmark_results_combined.csv",
+    "benchmark_results_combined/bitcode_benchmark_results_combined.csv",
+    "benchmark_results_combined/phasecode_benchmark_results_combined.csv",
+    "benchmark_results_combined/hamsim_benchmark_results_combined.csv",
+    "benchmark_results_combined/vqeproxy_benchmark_results_combined.csv",
+    "benchmark_results_combined/vanilla_qaoa_benchmark_results_combined.csv",
+    "benchmark_results_combined/fswap_qaoa_benchmark_results_combined.csv",
 ]
 
 # ------------------------------------------------------------
@@ -21,12 +21,13 @@ INPUT_FILES = [
 # ------------------------------------------------------------
 
 BACKEND_MAP = {
+    "ibm_kingston": "kingston",
     "ibm_marrakesh": "marrakesh",
     "ibm_fez": "fez",
     "ibm_torino": "torino",
 }
 
-ROW_ORDER = ["marrakesh", "fez", "torino"]
+ROW_ORDER = ["torino", "fez", "kingston", "marrakesh"]
 
 # ------------------------------------------------------------
 # Build label from each CSV row
@@ -95,7 +96,7 @@ for filepath in INPUT_FILES:
     if missing:
         raise ValueError(f"{filepath} is missing required columns: {missing}")
 
-    # keep only the three IBM backends you want
+    # keep only the IBM backends you want
     df = df[df["backend"].isin(BACKEND_MAP.keys())].copy()
     if df.empty:
         continue
@@ -119,18 +120,25 @@ all_scores = pd.DataFrame(records)
 
 # ------------------------------------------------------------
 # If duplicates exist for same backend/label, average them
+# Also save std and number of runs
 # ------------------------------------------------------------
 
 agg_scores = (
-    all_scores.groupby(["backend", "label"], as_index=False)["score"]
-    .mean()
+    all_scores.groupby(["backend", "label"], as_index=False)
+    .agg(
+        score_mean=("score", "mean"),
+        score_std=("score", "std"),
+        n_runs=("score", "count"),
+    )
 )
 
+agg_scores["score_std"] = agg_scores["score_std"].fillna(0)
+
 # ------------------------------------------------------------
-# Pivot into final matrix
+# Pivot into final matrix using the mean scores
 # ------------------------------------------------------------
 
-final_df = agg_scores.pivot(index="backend", columns="label", values="score")
+final_df = agg_scores.pivot(index="backend", columns="label", values="score_mean")
 
 # desired row order
 final_df = final_df.reindex(ROW_ORDER)
@@ -148,8 +156,13 @@ final_df.columns.name = ""
 final_df.to_csv("combined_benchmark_scores.csv")
 final_df.to_pickle("combined_benchmark_scores.pickle")
 
+agg_scores.to_csv("combined_benchmark_scores_aggregated_stats.csv", index=False)
+agg_scores.to_pickle("combined_benchmark_scores_aggregated_stats.pickle")
+
 print("Saved:")
 print("  combined_benchmark_scores.csv")
 print("  combined_benchmark_scores.pickle")
+print("  combined_benchmark_scores_aggregated_stats.csv")
+print("  combined_benchmark_scores_aggregated_stats.pickle")
 print()
 print(final_df)

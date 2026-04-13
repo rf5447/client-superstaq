@@ -1,0 +1,8 @@
+benchmark,n_qubits,backend,shots,score,job_id,timestamp
+QAOA_Vanilla,16,ibm_kingston,2000,0.5023332484096128,d7cpfnb0g7hs73dr4sk0,2026-04-10 20:37:57.755948
+QAOA_Vanilla,13,ibm_kingston,2000,0.5277566249708481,d7cpfnb0g7hs73dr4sk0,2026-04-10 20:37:57.753092
+QAOA_Vanilla,12,ibm_kingston,2000,0.4933965888112736,d7cpfnb0g7hs73dr4sk0,2026-04-10 20:37:57.750328
+QAOA_Vanilla,11,ibm_kingston,2000,0.5313251094877272,d7cpfnb0g7hs73dr4sk0,2026-04-10 20:37:57.747593
+QAOA_Vanilla,5,ibm_kingston,2000,0.46624999866359373,d7cpfnb0g7hs73dr4sk0,2026-04-10 20:37:57.744174
+QAOA_Vanilla,7,ibm_kingston,2000,0.6124315879140124,d7cpfnb0g7hs73dr4sk0,2026-04-10 20:37:57.745761
+QAOA_Vanilla,4,ibm_kingston,2000,0.33155805488274614,d7cpfnb0g7hs73dr4sk0,2026-04-10 20:37:57.742170

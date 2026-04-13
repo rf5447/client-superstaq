@@ -4,7 +4,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=32G
-#SBATCH --time=00:45:00
+#SBATCH --time=03:00:00
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=rf5447@princeton.edu
 #SBATCH --output=ghzcputiming_%j.out

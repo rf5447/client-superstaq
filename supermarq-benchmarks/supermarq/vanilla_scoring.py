@@ -7,8 +7,8 @@ import seaborn as sns
 import supermarq
 
 # Configuration
-input_directory = "vanilla_ibm" 
-output_csv = "vanilla_qaoa_benchmark_results.csv"
+input_directory = "ibm2/vanilla_ibm" 
+output_csv = "benchmark_results2/vanilla_qaoa_benchmark_results.csv"
 
 # CSV Column Headers
 headers = [
@@ -45,10 +45,10 @@ else:
                 
                 # Reverse each bitstring to convert Little-Endian (IBM) to Big-Endian (SupermarQ)
                 # +1 is without this line, -1 is with
-                # corrected_counts = {bitstr[::-1]: count for bitstr, count in counts.items()}
+                corrected_counts = {bitstr[::-1]: count for bitstr, count in counts.items()}
 
                 # 3. Calculate score
-                run_score = qaoa_benchmark.score(counts)
+                run_score = qaoa_benchmark.score(corrected_counts)
                 
                 # 4. Prepare the row for CSV
                 row = {
@@ -74,63 +74,63 @@ with open(output_csv, "w", newline="", encoding="utf-8") as f:
 
 print(f"\nSuccess! Aggregated {len(all_rows)} runs into '{output_csv}'.")
 
-# --- PLOT 1: LINE PLOT (Consistent with your first GHZ request) ---
-df = pd.DataFrame(all_rows)
-df['n_qubits'] = pd.to_numeric(df['n_qubits'])
-df['score'] = pd.to_numeric(df['score'])
+# # --- PLOT 1: LINE PLOT (Consistent with your first GHZ request) ---
+# df = pd.DataFrame(all_rows)
+# df['n_qubits'] = pd.to_numeric(df['n_qubits'])
+# df['score'] = pd.to_numeric(df['score'])
 
-sns.set_theme(style="whitegrid")
-fig, axes = plt.subplots(1, 1, figsize=(8, 6)) # Single plot as there is only one 'method'
-fig.suptitle('SupermarQ Vanilla QAOA', fontsize=18, fontweight='bold')
+# sns.set_theme(style="whitegrid")
+# fig, axes = plt.subplots(1, 1, figsize=(8, 6)) # Single plot as there is only one 'method'
+# fig.suptitle('SupermarQ Vanilla QAOA', fontsize=18, fontweight='bold')
 
-sns.lineplot(
-    data=df, 
-    x='n_qubits', 
-    y='score', 
-    hue='backend', 
-    marker='o', 
-    ax=axes,
-    linewidth=2.5,
-    markersize=8
-)
+# sns.lineplot(
+#     data=df, 
+#     x='n_qubits', 
+#     y='score', 
+#     hue='backend', 
+#     marker='o', 
+#     ax=axes,
+#     linewidth=2.5,
+#     markersize=8
+# )
 
-axes.set_title("Method: Vanilla", fontsize=14, fontweight='semibold')
-axes.set_xlabel("Number of Qubits", fontsize=12)
-axes.set_ylabel("Score", fontsize=12)
-axes.set_ylim(-0.05, 1.05)
-axes.legend(title="IBM Backend", frameon=True)
+# axes.set_title("Method: Vanilla", fontsize=14, fontweight='semibold')
+# axes.set_xlabel("Number of Qubits", fontsize=12)
+# axes.set_ylabel("Score", fontsize=12)
+# axes.set_ylim(-0.05, 1.05)
+# axes.legend(title="IBM Backend", frameon=True)
 
-plt.tight_layout(rect=[0, 0.03, 1, 0.95])
-plt.savefig("vanilla_performance_line.png", dpi=300)
-plt.show()
+# plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+# plt.savefig("vanilla_performance_line.png", dpi=300)
+# plt.show()
 
-# --- PLOT 2: BAR CHART (Consistent with your second GHZ request) ---
-sns.set_theme(style="white") 
-qubit_counts = sorted(df['n_qubits'].unique())
+# # --- PLOT 2: BAR CHART (Consistent with your second GHZ request) ---
+# sns.set_theme(style="white") 
+# qubit_counts = sorted(df['n_qubits'].unique())
 
-fig, ax = plt.subplots(1, 1, figsize=(10, 6))
-custom_palette = sns.color_palette("tab10", len(qubit_counts))
+# fig, ax = plt.subplots(1, 1, figsize=(10, 6))
+# custom_palette = sns.color_palette("tab10", len(qubit_counts))
 
-sns.barplot(
-    data=df,
-    x='backend',
-    y='score',
-    hue='n_qubits',
-    palette=custom_palette,
-    ax=ax,
-    edgecolor='gray',
-    capsize=.1,
-    errwidth=1.5 
-)
+# sns.barplot(
+#     data=df,
+#     x='backend',
+#     y='score',
+#     hue='n_qubits',
+#     palette=custom_palette,
+#     ax=ax,
+#     edgecolor='gray',
+#     capsize=.1,
+#     errwidth=1.5 
+# )
 
-ax.set_title("QAOA Method: VANILLA", fontsize=15, fontweight='bold', pad=20)
-ax.set_xlabel("Backend", fontsize=12)
-ax.set_ylabel("Score", fontsize=12)
-ax.set_ylim(0, 1.05)
-ax.legend(title="Qubits", loc='lower right')
-ax.axhline(0, color='black', linewidth=0.8)
+# ax.set_title("QAOA Method: VANILLA", fontsize=15, fontweight='bold', pad=20)
+# ax.set_xlabel("Backend", fontsize=12)
+# ax.set_ylabel("Score", fontsize=12)
+# ax.set_ylim(0, 1.05)
+# ax.legend(title="Qubits", loc='lower right')
+# ax.axhline(0, color='black', linewidth=0.8)
 
-plt.tight_layout()
-plt.savefig("vanilla_bar_charts.png", dpi=300)
-print(f"\nBar chart saved successfully as 'vanilla_bar_charts.png'")
-plt.show()
+# plt.tight_layout()
+# plt.savefig("vanilla_bar_charts.png", dpi=300)
+# print(f"\nBar chart saved successfully as 'vanilla_bar_charts.png'")
+# plt.show()

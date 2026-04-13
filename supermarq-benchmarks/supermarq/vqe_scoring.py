@@ -8,8 +8,8 @@ import seaborn as sns
 from collections import defaultdict
 
 # Configuration
-input_directory = "vqeproxy_ibm" 
-output_csv = "vqeproxy_benchmark_results.csv"
+input_directory = "ibmk/vqeproxy_ibmk" 
+output_csv = "benchmark_resultsk/vqeproxy_benchmark_results.csv"
 
 # Updated CSV Column Headers (Basis removed from rows since X/Z are combined into one score)
 headers = ["benchmark", "n_qubits", "n_layers", "backend", "shots", "score", "job_id", "timestamp"]
@@ -81,20 +81,20 @@ with open(output_csv, "w", newline="", encoding="utf-8") as f:
     writer.writeheader()
     writer.writerows(all_rows)
 
-# --- PLOTTING ---
-df = pd.DataFrame(all_rows)
-if not df.empty:
-    df[['n_qubits', 'score', 'n_layers']] = df[['n_qubits', 'score', 'n_layers']].apply(pd.to_numeric)
+# # --- PLOTTING ---
+# df = pd.DataFrame(all_rows)
+# if not df.empty:
+#     df[['n_qubits', 'score', 'n_layers']] = df[['n_qubits', 'score', 'n_layers']].apply(pd.to_numeric)
     
-    # Bar Plot Logic
-    sns.set_theme(style="white")
-    df['label'] = df['n_qubits'].astype(str) + "q, " + df['n_layers'].astype(str) + "L"
-    plt.figure(figsize=(12, 6))
+#     # Bar Plot Logic
+#     sns.set_theme(style="white")
+#     df['label'] = df['n_qubits'].astype(str) + "q, " + df['n_layers'].astype(str) + "L"
+#     plt.figure(figsize=(12, 6))
     
-    sns.barplot(data=df.sort_values(['n_qubits', 'n_layers']), x='backend', y='score', hue='label')
+#     sns.barplot(data=df.sort_values(['n_qubits', 'n_layers']), x='backend', y='score', hue='label')
     
-    plt.title("VQE Proxy Performance (Combined X+Z Score)", fontsize=16)
-    plt.ylim(0, 1.05)
-    plt.tight_layout()
-    plt.savefig("vqeproxy_combined_results.png", dpi=300)
-    plt.show()
+#     plt.title("VQE Proxy Performance (Combined X+Z Score)", fontsize=16)
+#     plt.ylim(0, 1.05)
+#     plt.tight_layout()
+#     plt.savefig("vqeproxy_combined_results.png", dpi=300)
+#     plt.show()

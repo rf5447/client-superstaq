@@ -1,0 +1,31 @@
+benchmark,n_qubits,n_rounds,bit_state,backend,shots,score,job_id,timestamp
+PhaseCode,9,4,"[0, 1, 0, 1, 0, 1, 0, 1, 0]",ibm_kingston,2000,0.1924999999999835,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.239754
+PhaseCode,4,5,"[0, 1, 0, 1]",ibm_kingston,2000,0.46399999999999597,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.201053
+PhaseCode,3,3,"[0, 1, 0]",ibm_kingston,2000,0.7749999999999998,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.186421
+PhaseCode,3,9,"[0, 1, 0]",ibm_kingston,2000,0.3054999999999911,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.193890
+PhaseCode,7,9,"[0, 1, 0, 1, 0, 1, 0]",ibm_kingston,2000,0.07299999999998585,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.232268
+PhaseCode,9,3,"[0, 1, 0, 1, 0, 1, 0, 1, 0]",ibm_kingston,2000,0.2619999999999854,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.237338
+PhaseCode,4,4,"[0, 1, 0, 1]",ibm_kingston,2000,0.522999999999999,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.199142
+PhaseCode,3,2,"[0, 1, 0]",ibm_kingston,2000,0.838,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.184346
+PhaseCode,5,4,"[0, 1, 0, 1, 0]",ibm_kingston,2000,0.4904999999999979,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.211102
+PhaseCode,3,4,"[0, 1, 0]",ibm_kingston,2000,0.7059999999999997,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.188165
+PhaseCode,4,7,"[0, 1, 0, 1]",ibm_kingston,2000,0.3424999999999897,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.203094
+PhaseCode,9,5,"[0, 1, 0, 1, 0, 1, 0, 1, 0]",ibm_kingston,2000,0.1164999999999841,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.242472
+PhaseCode,5,5,"[0, 1, 0, 1, 0]",ibm_kingston,2000,0.44949999999999435,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.213078
+PhaseCode,3,7,"[0, 1, 0]",ibm_kingston,2000,0.4109999999999945,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.191821
+PhaseCode,3,5,"[0, 1, 0]",ibm_kingston,2000,0.6724999999999995,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.189918
+PhaseCode,9,7,"[0, 1, 0, 1, 0, 1, 0, 1, 0]",ibm_kingston,2000,0.05949999999998709,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.245545
+PhaseCode,5,3,"[0, 1, 0, 1, 0]",ibm_kingston,2000,0.5824999999999991,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.209189
+PhaseCode,9,9,"[0, 1, 0, 1, 0, 1, 0, 1, 0]",ibm_kingston,2000,0.030499999999989834,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.249048
+PhaseCode,4,3,"[0, 1, 0, 1]",ibm_kingston,2000,0.6114999999999995,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.197380
+PhaseCode,7,2,"[0, 1, 0, 1, 0, 1, 0]",ibm_kingston,2000,0.5254999999999986,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.219983
+PhaseCode,4,9,"[0, 1, 0, 1]",ibm_kingston,2000,0.24849999999998576,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.205331
+PhaseCode,9,2,"[0, 1, 0, 1, 0, 1, 0, 1, 0]",ibm_kingston,2000,0.3849999999999915,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.235191
+PhaseCode,4,2,"[0, 1, 0, 1]",ibm_kingston,2000,0.7174999999999998,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.195775
+PhaseCode,7,4,"[0, 1, 0, 1, 0, 1, 0]",ibm_kingston,2000,0.28849999999998566,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.224115
+PhaseCode,5,2,"[0, 1, 0, 1, 0]",ibm_kingston,2000,0.6864999999999997,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.207443
+PhaseCode,7,7,"[0, 1, 0, 1, 0, 1, 0]",ibm_kingston,2000,0.13299999999998344,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.229140
+PhaseCode,5,9,"[0, 1, 0, 1, 0]",ibm_kingston,2000,0.24699999999998423,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.217707
+PhaseCode,5,7,"[0, 1, 0, 1, 0]",ibm_kingston,2000,0.33349999999998875,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.215293
+PhaseCode,7,3,"[0, 1, 0, 1, 0, 1, 0]",ibm_kingston,2000,0.3729999999999901,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.221948
+PhaseCode,7,5,"[0, 1, 0, 1, 0, 1, 0]",ibm_kingston,2000,0.21799999999998396,d7couej0g7hs73dr4bdg,2026-04-10 20:01:30.226476

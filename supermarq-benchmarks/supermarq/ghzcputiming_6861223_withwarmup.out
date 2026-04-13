@@ -1,0 +1,400 @@
+/home/rf5447/client-superstaq/supermarq-benchmarks/supermarq/.venv/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+============================================================
+Hardware / job environment info
+============================================================
+Hostname: della-r3c2n7
+SLURM job ID: 6861223
+SLURM node list: della-r3c2n7
+CPU: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+============================================================
+
+method = star, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 5228.20 ms | score time: 0.03 ms
+  With 0.5% error probability, GHZ score = 0.9729 | sim time: 5083.29 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8975 | sim time: 5111.74 ms | score time: 0.02 ms
+
+method = star, num_qubits = 3
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 5238.11 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9788 | sim time: 5211.21 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8930 | sim time: 5199.77 ms | score time: 0.02 ms
+
+method = star, num_qubits = 4
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 8416.72 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9477 | sim time: 8214.37 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8247 | sim time: 8349.38 ms | score time: 0.03 ms
+
+method = star, num_qubits = 5
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 12127.06 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9220 | sim time: 11774.37 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7627 | sim time: 11737.40 ms | score time: 0.04 ms
+
+method = star, num_qubits = 6
+  With 0.0% error probability, GHZ score = 0.9994 | sim time: 16191.68 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8927 | sim time: 16448.07 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.6138 | sim time: 16612.33 ms | score time: 0.04 ms
+
+method = star, num_qubits = 7
+  With 0.0% error probability, GHZ score = 0.9996 | sim time: 21868.48 ms | score time: 0.03 ms
+  With 0.5% error probability, GHZ score = 0.8489 | sim time: 21843.93 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5370 | sim time: 21208.45 ms | score time: 0.03 ms
+
+method = star, num_qubits = 8
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 26897.80 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8009 | sim time: 26988.80 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.4567 | sim time: 27094.71 ms | score time: 0.04 ms
+
+method = star, num_qubits = 9
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 33636.44 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7949 | sim time: 33590.92 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.3649 | sim time: 33612.62 ms | score time: 0.05 ms
+
+method = star, num_qubits = 10
+  With 0.0% error probability, GHZ score = 0.9997 | sim time: 41084.53 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7189 | sim time: 40997.43 ms | score time: 0.04 ms
+  With 2.0% error probability, GHZ score = 0.2746 | sim time: 41013.23 ms | score time: 0.07 ms
+
+method = ladder, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9982 | sim time: 5132.21 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9707 | sim time: 4966.59 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8940 | sim time: 4941.77 ms | score time: 0.02 ms
+
+method = ladder, num_qubits = 4
+  With 0.0% error probability, GHZ score = 0.9996 | sim time: 7971.38 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9419 | sim time: 7951.16 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8279 | sim time: 8039.45 ms | score time: 0.03 ms
+
+method = ladder, num_qubits = 5
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 11934.33 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9130 | sim time: 11606.03 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7059 | sim time: 11609.20 ms | score time: 0.02 ms
+
+method = ladder, num_qubits = 6
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 15909.44 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8859 | sim time: 15895.95 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.6106 | sim time: 15899.24 ms | score time: 0.03 ms
+
+method = ladder, num_qubits = 7
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 20981.27 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8438 | sim time: 20957.63 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5650 | sim time: 21123.29 ms | score time: 0.03 ms
+
+method = ladder, num_qubits = 8
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 27230.15 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8336 | sim time: 27069.66 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.4380 | sim time: 27274.85 ms | score time: 0.04 ms
+
+method = ladder, num_qubits = 9
+  With 0.0% error probability, GHZ score = 0.9996 | sim time: 33729.07 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7520 | sim time: 33556.57 ms | score time: 0.04 ms
+  With 2.0% error probability, GHZ score = 0.3687 | sim time: 33956.53 ms | score time: 0.06 ms
+
+method = ladder, num_qubits = 10
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 41273.41 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7160 | sim time: 41281.36 ms | score time: 0.04 ms
+  With 2.0% error probability, GHZ score = 0.2750 | sim time: 41308.21 ms | score time: 0.08 ms
+
+method = logdepth, num_qubits = 3
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 5001.38 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9630 | sim time: 4991.17 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.9134 | sim time: 4988.09 ms | score time: 0.02 ms
+
+method = logdepth, num_qubits = 4
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 6607.22 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9649 | sim time: 6573.49 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8599 | sim time: 6578.46 ms | score time: 0.02 ms
+
+method = logdepth, num_qubits = 5
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 9935.01 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9479 | sim time: 9926.22 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7910 | sim time: 9940.23 ms | score time: 0.02 ms
+
+method = logdepth, num_qubits = 6
+  With 0.0% error probability, GHZ score = 0.9997 | sim time: 11793.27 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9429 | sim time: 11823.05 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.7329 | sim time: 11793.08 ms | score time: 0.03 ms
+
+method = logdepth, num_qubits = 7
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 13701.76 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9019 | sim time: 13693.44 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.6856 | sim time: 13677.55 ms | score time: 0.03 ms
+
+method = logdepth, num_qubits = 8
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 15676.76 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9096 | sim time: 15691.77 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.6601 | sim time: 15731.13 ms | score time: 0.03 ms
+
+method = logdepth, num_qubits = 9
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 20977.23 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8620 | sim time: 20948.04 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5570 | sim time: 20909.14 ms | score time: 0.04 ms
+
+method = logdepth, num_qubits = 10
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 23327.60 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8369 | sim time: 23289.48 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5080 | sim time: 23226.02 ms | score time: 0.06 ms
+
+method = star, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9996 | sim time: 4951.61 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9808 | sim time: 4952.71 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.9048 | sim time: 4946.72 ms | score time: 0.02 ms
+
+method = star, num_qubits = 4
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 7977.66 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9599 | sim time: 7948.19 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8310 | sim time: 7952.62 ms | score time: 0.02 ms
+
+method = star, num_qubits = 5
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 11706.37 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9180 | sim time: 11699.58 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7164 | sim time: 11711.09 ms | score time: 0.02 ms
+
+method = star, num_qubits = 6
+  With 0.0% error probability, GHZ score = 0.9990 | sim time: 16076.21 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9049 | sim time: 16082.35 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.6360 | sim time: 16068.68 ms | score time: 0.03 ms
+
+method = star, num_qubits = 7
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 21093.75 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8550 | sim time: 21170.39 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5488 | sim time: 21110.20 ms | score time: 0.03 ms
+
+method = star, num_qubits = 8
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 27134.49 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8440 | sim time: 27174.17 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.4569 | sim time: 27219.74 ms | score time: 0.04 ms
+
+method = star, num_qubits = 9
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 33784.96 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7420 | sim time: 33880.25 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.3556 | sim time: 33861.85 ms | score time: 0.06 ms
+
+method = star, num_qubits = 10
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 41352.98 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7204 | sim time: 41257.66 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.2716 | sim time: 41392.69 ms | score time: 0.07 ms
+
+method = ladder, num_qubits = 3
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 5008.98 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9720 | sim time: 5006.25 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8979 | sim time: 5006.10 ms | score time: 0.02 ms
+
+method = ladder, num_qubits = 4
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 8053.05 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9390 | sim time: 8039.65 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8250 | sim time: 8044.64 ms | score time: 0.02 ms
+
+method = ladder, num_qubits = 5
+  With 0.0% error probability, GHZ score = 0.9995 | sim time: 11740.57 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9210 | sim time: 11749.08 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7477 | sim time: 11728.61 ms | score time: 0.02 ms
+
+method = ladder, num_qubits = 6
+  With 0.0% error probability, GHZ score = 0.9996 | sim time: 16066.25 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9040 | sim time: 16083.72 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.6496 | sim time: 16079.08 ms | score time: 0.03 ms
+
+method = ladder, num_qubits = 7
+  With 0.0% error probability, GHZ score = 0.9994 | sim time: 21053.55 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8530 | sim time: 21070.32 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5036 | sim time: 21143.71 ms | score time: 0.03 ms
+
+method = ladder, num_qubits = 8
+  With 0.0% error probability, GHZ score = 0.9995 | sim time: 27268.27 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8039 | sim time: 27247.98 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.4650 | sim time: 27193.37 ms | score time: 0.04 ms
+
+method = ladder, num_qubits = 9
+  With 0.0% error probability, GHZ score = 0.9998 | sim time: 33783.36 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7500 | sim time: 33816.31 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.3697 | sim time: 33813.89 ms | score time: 0.05 ms
+
+method = ladder, num_qubits = 10
+  With 0.0% error probability, GHZ score = 0.9997 | sim time: 41251.18 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7229 | sim time: 41260.83 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.2897 | sim time: 41302.51 ms | score time: 0.07 ms
+
+method = logdepth, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 4999.56 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9779 | sim time: 5005.98 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8906 | sim time: 5000.48 ms | score time: 0.02 ms
+
+method = logdepth, num_qubits = 4
+  With 0.0% error probability, GHZ score = 0.9996 | sim time: 6583.50 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9580 | sim time: 6585.13 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8703 | sim time: 6591.07 ms | score time: 0.02 ms
+
+method = logdepth, num_qubits = 5
+  With 0.0% error probability, GHZ score = 0.9996 | sim time: 9962.58 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9289 | sim time: 9966.39 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7785 | sim time: 9979.73 ms | score time: 0.02 ms
+
+method = logdepth, num_qubits = 6
+  With 0.0% error probability, GHZ score = 0.9992 | sim time: 11786.19 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9310 | sim time: 11796.52 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7589 | sim time: 11802.41 ms | score time: 0.03 ms
+
+method = logdepth, num_qubits = 7
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 13706.35 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9358 | sim time: 13694.07 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.6785 | sim time: 13694.57 ms | score time: 0.03 ms
+
+method = logdepth, num_qubits = 8
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 15765.53 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9119 | sim time: 15792.56 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.6850 | sim time: 15777.12 ms | score time: 0.03 ms
+
+method = logdepth, num_qubits = 9
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 21041.69 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8788 | sim time: 21022.28 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5667 | sim time: 21067.14 ms | score time: 0.04 ms
+
+method = logdepth, num_qubits = 10
+  With 0.0% error probability, GHZ score = 0.9986 | sim time: 23527.27 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8429 | sim time: 23553.70 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5418 | sim time: 23518.96 ms | score time: 0.05 ms
+
+method = star, num_qubits = 3
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 5039.17 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9759 | sim time: 5036.95 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.9018 | sim time: 5042.30 ms | score time: 0.02 ms
+
+method = star, num_qubits = 4
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 8071.31 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9494 | sim time: 8075.11 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8060 | sim time: 8053.41 ms | score time: 0.02 ms
+
+method = star, num_qubits = 5
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 11780.74 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9332 | sim time: 11752.85 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7240 | sim time: 11793.65 ms | score time: 0.03 ms
+
+method = star, num_qubits = 6
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 16043.18 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8900 | sim time: 16077.58 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.6488 | sim time: 16067.48 ms | score time: 0.03 ms
+
+method = star, num_qubits = 7
+  With 0.0% error probability, GHZ score = 0.9998 | sim time: 21195.61 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8599 | sim time: 21184.50 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5288 | sim time: 21123.55 ms | score time: 0.03 ms
+
+method = star, num_qubits = 8
+  With 0.0% error probability, GHZ score = 0.9993 | sim time: 27182.37 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8357 | sim time: 27118.27 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.4514 | sim time: 27193.71 ms | score time: 0.05 ms
+
+method = star, num_qubits = 9
+  With 0.0% error probability, GHZ score = 0.9997 | sim time: 33911.74 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7420 | sim time: 33851.29 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.3556 | sim time: 33936.09 ms | score time: 0.05 ms
+
+method = star, num_qubits = 10
+  With 0.0% error probability, GHZ score = 0.9996 | sim time: 41383.20 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7197 | sim time: 41330.08 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.2798 | sim time: 41406.06 ms | score time: 0.07 ms
+
+method = ladder, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9998 | sim time: 5047.23 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9742 | sim time: 5013.05 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8880 | sim time: 5025.23 ms | score time: 0.02 ms
+
+method = ladder, num_qubits = 4
+  With 0.0% error probability, GHZ score = 0.9996 | sim time: 8054.08 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9538 | sim time: 8075.11 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8060 | sim time: 8083.43 ms | score time: 0.03 ms
+
+method = ladder, num_qubits = 5
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 11765.56 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9317 | sim time: 11765.78 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.6860 | sim time: 11787.75 ms | score time: 0.02 ms
+
+method = ladder, num_qubits = 6
+  With 0.0% error probability, GHZ score = 0.9993 | sim time: 16120.84 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8885 | sim time: 16091.92 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.6152 | sim time: 16101.98 ms | score time: 0.03 ms
+
+method = ladder, num_qubits = 7
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 21181.89 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8460 | sim time: 21226.40 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5240 | sim time: 21210.09 ms | score time: 0.04 ms
+
+method = ladder, num_qubits = 8
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 27305.46 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8150 | sim time: 27351.44 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.4690 | sim time: 27238.21 ms | score time: 0.04 ms
+
+method = ladder, num_qubits = 9
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 33839.33 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7529 | sim time: 33987.26 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.3520 | sim time: 33934.28 ms | score time: 0.06 ms
+
+method = ladder, num_qubits = 10
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 41367.77 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7156 | sim time: 41497.42 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.2776 | sim time: 41495.99 ms | score time: 0.07 ms
+
+method = logdepth, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9997 | sim time: 5060.16 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9700 | sim time: 5041.16 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8959 | sim time: 5030.60 ms | score time: 0.02 ms
+
+method = logdepth, num_qubits = 4
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 6644.68 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9630 | sim time: 6645.46 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8503 | sim time: 6650.25 ms | score time: 0.02 ms
+
+method = logdepth, num_qubits = 5
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 10044.87 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9319 | sim time: 10026.11 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7947 | sim time: 10004.88 ms | score time: 0.02 ms
+
+method = logdepth, num_qubits = 6
+  With 0.0% error probability, GHZ score = 0.9997 | sim time: 11903.12 ms | score time: 0.03 ms
+  With 0.5% error probability, GHZ score = 0.9298 | sim time: 11922.29 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.7470 | sim time: 11919.64 ms | score time: 0.03 ms
+
+method = logdepth, num_qubits = 7
+  With 0.0% error probability, GHZ score = 0.9996 | sim time: 13820.44 ms | score time: 0.03 ms
+  With 0.5% error probability, GHZ score = 0.9182 | sim time: 13867.74 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.6969 | sim time: 13802.49 ms | score time: 0.04 ms
+
+method = logdepth, num_qubits = 8
+  With 0.0% error probability, GHZ score = 0.9998 | sim time: 15894.11 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9010 | sim time: 15877.72 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.6558 | sim time: 15870.81 ms | score time: 0.03 ms
+
+method = logdepth, num_qubits = 9
+  With 0.0% error probability, GHZ score = 0.9997 | sim time: 21194.13 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8799 | sim time: 21246.83 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5404 | sim time: 21217.26 ms | score time: 0.05 ms
+
+method = logdepth, num_qubits = 10
+  With 0.0% error probability, GHZ score = 0.9994 | sim time: 23570.18 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8480 | sim time: 23654.83 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5420 | sim time: 23500.49 ms | score time: 0.05 ms
+
+Wrote results to ghz_timing_results.csv
+	Command being timed: "./.venv/bin/python3 -u ghzcputiming.py"
+	User time (seconds): 3919.97
+	System time (seconds): 0.71
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:06:16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 221016
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 66757
+	Voluntary context switches: 13802
+	Involuntary context switches: 10611
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

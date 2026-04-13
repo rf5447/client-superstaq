@@ -226,14 +226,14 @@ def plot_benchmark(
     assert isinstance(ax, RadarAxesMeta)
 
     ax.set_rgrids([0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
-    ax.set_title(
-        str(title),
-        weight="bold",
-        size="medium",
-        position=(0.5, 1.1),
-        horizontalalignment="center",
-        verticalalignment="center",
-    )
+    # ax.set_title(
+    #     str(title),
+    #     weight="bold",
+    #     size="medium",
+    #     position=(0.5, 1.1),
+    #     horizontalalignment="center",
+    #     verticalalignment="center",
+    # )
     for d, label in zip(features, labels):
         ax.plot(theta, d, label=label)
         ax.fill(theta, d, alpha=0.25)

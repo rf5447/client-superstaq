@@ -1,0 +1,32 @@
+/home/rf5447/client-superstaq/supermarq-benchmarks/supermarq/.venv/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+============================================================
+Hardware / job environment info
+============================================================
+Hostname: della9.princeton.edu
+SLURM job ID: N/A
+SLURM node list: N/A
+CPU: AMD EPYC 9654 96-Core Processor
+============================================================
+
+method = star, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9998 | sim time: 2500.90 ms | score time: 0.03 ms
+  With 0.5% error probability, GHZ score = 0.9760 | sim time: 2464.80 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.9000 | sim time: 2463.25 ms | score time: 0.02 ms
+
+method = star, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9995 | sim time: 2478.70 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9738 | sim time: 2453.58 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8919 | sim time: 2458.37 ms | score time: 0.02 ms
+
+method = ladder, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 2449.14 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9769 | sim time: 2460.07 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.9059 | sim time: 2454.26 ms | score time: 0.02 ms
+
+method = logdepth, num_qubits = 3
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 2455.30 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9639 | sim time: 2462.75 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8983 | sim time: 2469.19 ms | score time: 0.02 ms
+
+Wrote results to ghz_timing_results.csv

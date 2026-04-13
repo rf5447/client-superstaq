@@ -1,0 +1,74 @@
+/home/rf5447/client-superstaq/supermarq-benchmarks/supermarq/.venv/lib64/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+============================================================
+Hardware / job environment info
+============================================================
+Hostname: della-r3c2n2
+SLURM job ID: 6861683
+SLURM node list: della-r3c2n2
+CPU: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+============================================================
+
+method = star, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9990 | sim time: 5038.45 ms | score time: 0.03 ms
+  With 0.5% error probability, GHZ score = 0.9737 | sim time: 4943.15 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.9160 | sim time: 4972.47 ms | score time: 0.02 ms
+
+method = star, num_qubits = 3
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 4928.53 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9808 | sim time: 4934.38 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.9168 | sim time: 4951.76 ms | score time: 0.02 ms
+
+method = star, num_qubits = 4
+  With 0.0% error probability, GHZ score = 0.9997 | sim time: 7995.11 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9489 | sim time: 7922.37 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8419 | sim time: 7967.26 ms | score time: 0.02 ms
+
+method = star, num_qubits = 5
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 11550.06 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9229 | sim time: 11505.41 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7464 | sim time: 11479.89 ms | score time: 0.03 ms
+
+method = star, num_qubits = 6
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 15920.09 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8750 | sim time: 15973.83 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.6120 | sim time: 15969.32 ms | score time: 0.03 ms
+
+method = star, num_qubits = 7
+  With 0.0% error probability, GHZ score = 0.9998 | sim time: 21143.16 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8760 | sim time: 21101.63 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.5482 | sim time: 21189.26 ms | score time: 0.03 ms
+
+method = star, num_qubits = 8
+  With 0.0% error probability, GHZ score = 0.9972 | sim time: 27111.91 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.8199 | sim time: 27018.55 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.4419 | sim time: 27056.68 ms | score time: 0.05 ms
+
+method = star, num_qubits = 9
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 33706.15 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7860 | sim time: 33630.33 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.3578 | sim time: 33716.62 ms | score time: 0.06 ms
+
+method = star, num_qubits = 10
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 41018.25 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.7059 | sim time: 40970.31 ms | score time: 0.03 ms
+  With 2.0% error probability, GHZ score = 0.2535 | sim time: 41093.47 ms | score time: 0.07 ms
+
+method = ladder, num_qubits = 3
+  With 0.0% error probability, GHZ score = 0.9989 | sim time: 4986.93 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9788 | sim time: 4982.35 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.9042 | sim time: 4935.09 ms | score time: 0.02 ms
+
+method = ladder, num_qubits = 4
+  With 0.0% error probability, GHZ score = 0.9984 | sim time: 7975.91 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9559 | sim time: 7991.58 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.8387 | sim time: 8006.10 ms | score time: 0.02 ms
+
+method = ladder, num_qubits = 5
+  With 0.0% error probability, GHZ score = 1.0000 | sim time: 11655.36 ms | score time: 0.02 ms
+  With 0.5% error probability, GHZ score = 0.9089 | sim time: 11694.29 ms | score time: 0.02 ms
+  With 2.0% error probability, GHZ score = 0.7130 | sim time: 11660.88 ms | score time: 0.03 ms
+
+method = ladder, num_qubits = 6
+  With 0.0% error probability, GHZ score = 0.9999 | sim time: 15977.75 ms | score time: 0.02 ms
+[2026-04-11T16:05:13.583] error: *** JOB 6861683 ON della-r3c2n2 CANCELLED AT 2026-04-11T16:05:13 DUE to SIGNAL Terminated ***

@@ -56,9 +56,49 @@ def noisy_simulation(circuit: cirq.Circuit, p: float) -> collections.Counter:
     return collections.Counter(counts)
 
 
+def run_one_case(method, num_qubits):
+    print(f"\nmethod = {method}, num_qubits = {num_qubits}")
+
+    t0 = time.perf_counter()
+    ghz = supermarq.ghz.GHZ(num_qubits, method=method)
+    ghz_circuit = ghz.circuit()
+    t1 = time.perf_counter()
+    build_ms = (t1 - t0) * 1e3
+
+    error_prob = 0.0
+
+    s0 = time.perf_counter()
+    counts = noisy_simulation(ghz_circuit, p=error_prob)
+    s1 = time.perf_counter()
+    sim_ms = (s1 - s0) * 1e3
+
+    c0 = time.perf_counter()
+    score = ghz.score(counts)
+    c1 = time.perf_counter()
+    score_ms = (c1 - c0) * 1e3
+
+    total_ms = build_ms + sim_ms + score_ms
+
+    print(
+        f"  With {error_prob*100:.1f}% error probability, "
+        f"GHZ score = {score:.4f} | sim time: {sim_ms:.2f} ms "
+        f"| score time: {score_ms:.2f} ms"
+    )
+
+    return [
+        method,
+        num_qubits,
+        f"{score:.6f}",
+        f"{build_ms:.3f}",
+        f"{sim_ms:.3f}",
+        f"{score_ms:.3f}",
+        f"{total_ms:.3f}",
+    ]
+
+
 print_hardware_info()
 
-out_path = "ghz_timing_results.csv"
+out_path = "ghz_timing_results_excludingwarmup_ordered.csv"
 write_header = not os.path.exists(out_path)
 
 with open(out_path, "a", newline="") as f:
@@ -68,66 +108,20 @@ with open(out_path, "a", newline="") as f:
             "method",
             "num_qubits",
             "Score (0.0% error)",
-            "Score (0.5% error)",
-            "Score (2.0% error)",
             "Circuit creation time (ms)",
             "Simulation time (ms)",
             "Score calculation time (ms)",
             "Total time (ms)"
         ])
 
-    for method in ["star", "ladder", "logdepth"]:
-        for num_qubits in range(3, 11):
-            print(f"\nmethod = {method}, num_qubits = {num_qubits}")
+    # One warm-up run only; do not write it
+    _ = run_one_case("star", 3)
 
-            t0 = time.perf_counter()
-            ghz = supermarq.ghz.GHZ(num_qubits, method=method)
-            ghz_circuit = ghz.circuit()
-            t1 = time.perf_counter()
-            build_ms = (t1 - t0) * 1e3
-
-            ghz_scores = []
-            sim_times_ms = []
-            score_times_ms = []
-            error_probs = [0.0, 0.005, 0.02]
-
-            for error_prob in error_probs:
-                s0 = time.perf_counter()
-                counts = noisy_simulation(ghz_circuit, p=error_prob)
-                s1 = time.perf_counter()
-
-                c0 = time.perf_counter()
-                score = ghz.score(counts)
-                c1 = time.perf_counter()
-
-                ghz_scores.append((error_prob, score))
-                sim_times_ms.append((error_prob, (s1 - s0) * 1e3))
-                score_times_ms.append((error_prob, (c1 - c0) * 1e3))
-
-                print(
-                    f"  With {error_prob*100:.1f}% error probability, "
-                    f"GHZ score = {score:.4f} | sim time: {sim_times_ms[-1][1]:.2f} ms "
-                    f"| score time: {score_times_ms[-1][1]:.2f} ms"
-                )
-
-            total_sim_ms = sum(t for _, t in sim_times_ms)
-            total_score_ms = sum(t for _, t in score_times_ms)
-            total_ms = build_ms + total_sim_ms + total_score_ms
-
-            score_0 = next(s for (p, s) in ghz_scores if p == 0.0)
-            score_05 = next(s for (p, s) in ghz_scores if p == 0.005)
-            score_2_0 = next(s for (p, s) in ghz_scores if p == 0.02)
-
-            w.writerow([
-                method,
-                num_qubits,
-                f"{score_0:.6f}",
-                f"{score_05:.6f}",
-                f"{score_2_0:.6f}",
-                f"{build_ms:.3f}",
-                f"{total_sim_ms:.3f}",
-                f"{total_score_ms:.3f}",
-                f"{total_ms:.3f}",
-            ])
+    # Real runs: 3 repetitions for 3..10
+    for rep in range(3):
+        for method in ["logdepth", "ladder", "star"]:
+            for num_qubits in range(3, 11):
+                row = run_one_case(method, num_qubits)
+                w.writerow(row)
 
 print(f"\nWrote results to {out_path}")

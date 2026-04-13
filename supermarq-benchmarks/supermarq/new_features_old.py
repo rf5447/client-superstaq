@@ -1,8 +1,10 @@
 import features
-from benchmarks import mermin_bell, bit_code_old, phase_code_old
+from benchmarks import mermin_bell, bit_code_old, phase_code_old, bit_code, phase_code
 import supermarq
 import matplotlib.pyplot as plt
+from matplotlib import font_manager as fm
 
+fm.fontManager.addfont("/usr/share/fonts/msttcorefonts/times.ttf")
 plt.rcParams["font.family"] = "Times New Roman"
 
 
@@ -27,12 +29,12 @@ for nq in [3, 5, 10, 25, 30, 50, 100]:
     
 spoke_labels = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']
 supermarq.plotting.plot_benchmark(
-    title,
+    '',
     labels,
     feature_vecs,
     spoke_labels=spoke_labels,
     legend_loc=(1.05, 0.25),
-    savefn=f"{title.replace(' ', '_')}_nr2.png",
+    savefn=f"paper_features/{title.replace(' ', '_')}_nr2.png",
     show=False,
 )
 
@@ -57,12 +59,12 @@ for nq in [3, 5, 10, 25, 30, 50, 100]:
     
 spoke_labels = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']
 supermarq.plotting.plot_benchmark(
-    title,
+    '',
     labels,
     feature_vecs,
     spoke_labels=spoke_labels,
     legend_loc=(1.05, 0.25),
-    savefn=f"{title.replace(' ', '_')}_nr3.png",
+    savefn=f"paper_features/{title.replace(' ', '_')}_nr3.png",
     show=False,
 )
 
@@ -87,12 +89,12 @@ for nr in [2, 3, 5, 10, 25, 30, 50, 100]:
     
 spoke_labels = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']
 supermarq.plotting.plot_benchmark(
-    title,
+    '',
     labels,
     feature_vecs,
     spoke_labels=spoke_labels,
     legend_loc=(1.05, 0.25),
-    savefn=f"{title.replace(' ', '_')}_nq3_nrSweep.png",
+    savefn=f"paper_features/{title.replace(' ', '_')}_nq3_nrSweep.png",
     show=False,
 )
 
@@ -117,12 +119,12 @@ for nr in [2, 3, 5, 10, 25, 30, 50, 100]:
     
 spoke_labels = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']
 supermarq.plotting.plot_benchmark(
-    title,
+    '',
     labels,
     feature_vecs,
     spoke_labels=spoke_labels,
     legend_loc=(1.05, 0.25),
-    savefn=f"{title.replace(' ', '_')}_nq5_nrSweep.png",
+    savefn=f"paper_features/{title.replace(' ', '_')}_nq5_nrSweep.png",
     show=False,
 )
 
@@ -147,12 +149,12 @@ for nq in [3, 5, 10, 25, 30, 50, 100]:
     
 spoke_labels = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']
 supermarq.plotting.plot_benchmark(
-    title,
+    '',
     labels,
     feature_vecs,
     spoke_labels=spoke_labels,
     legend_loc=(1.05, 0.25),
-    savefn=f"{title.replace(' ', '_')}_nr2.png",
+    savefn=f"paper_features/{title.replace(' ', '_')}_nr2.png",
     show=False,
 )
 
@@ -177,12 +179,12 @@ for nq in [3, 5, 10, 25, 30, 50, 100]:
     
 spoke_labels = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']
 supermarq.plotting.plot_benchmark(
-    title,
+    '',
     labels,
     feature_vecs,
     spoke_labels=spoke_labels,
     legend_loc=(1.05, 0.25),
-    savefn=f"{title.replace(' ', '_')}_nr3.png",
+    savefn=f"paper_features/{title.replace(' ', '_')}_nr3.png",
     show=False,
 )
 
@@ -207,12 +209,12 @@ for nr in [2, 3, 5, 10, 25, 30, 50, 100]:
     
 spoke_labels = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']
 supermarq.plotting.plot_benchmark(
-    title,
+    '',
     labels,
     feature_vecs,
     spoke_labels=spoke_labels,
     legend_loc=(1.05, 0.25),
-    savefn=f"{title.replace(' ', '_')}_nq3_nrSweep.png",
+    savefn=f"paper_features/{title.replace(' ', '_')}_nq3_nrSweep.png",
     show=False,
 )
 
@@ -237,11 +239,11 @@ for nr in [2, 3, 5, 10, 25, 30, 50, 100]:
     
 spoke_labels = ['PC', 'Liv', 'Par', 'Mea', 'Ent', 'CD']
 supermarq.plotting.plot_benchmark(
-    title,
+    '',
     labels,
     feature_vecs,
     spoke_labels=spoke_labels,
     legend_loc=(1.05, 0.25),
-    savefn=f"{title.replace(' ', '_')}_nq5_nrSweep.png",
+    savefn=f"paper_features/{title.replace(' ', '_')}_nq5_nrSweep.png",
     show=False,
 )
