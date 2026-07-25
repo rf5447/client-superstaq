@@ -166,3 +166,4 @@ vendor
 
 
 supermarq-benchmarks/supermarq/credentials.py
+supermarq-benchmarks/supermarq/credentials_ionq.py

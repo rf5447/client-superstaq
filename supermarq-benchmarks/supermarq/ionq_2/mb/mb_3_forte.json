@@ -1,0 +1,15 @@
+{
+  "benchmark": "MerminBell",
+  "experiment": "ionq_2",
+  "n_qubits": 3,
+  "backend": "qpu.forte-1",
+  "noise_model": null,
+  "shots": 2000,
+  "job_id": "019f822b-2bc0-7679-8b51-aece0c1cf3f9",
+  "timestamp": "2026-07-20T21:01:58.125112",
+  "counts": {
+    "100": 1990,
+    "000": 8,
+    "110": 2
+  }
+}

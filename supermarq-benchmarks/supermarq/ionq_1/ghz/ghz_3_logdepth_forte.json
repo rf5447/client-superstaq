@@ -1,0 +1,21 @@
+{
+  "benchmark": "GHZ",
+  "experiment": "ionq_1",
+  "n_qubits": 3,
+  "method": "logdepth",
+  "backend": "qpu.forte-1",
+  "noise_model": null,
+  "shots": 2000,
+  "job_id": "019f7887-d398-7586-88db-11a8817053e5",
+  "timestamp": "2026-07-19T00:06:27.592485",
+  "counts": {
+    "111": 978,
+    "000": 972,
+    "110": 15,
+    "011": 13,
+    "101": 8,
+    "010": 6,
+    "001": 4,
+    "100": 4
+  }
+}

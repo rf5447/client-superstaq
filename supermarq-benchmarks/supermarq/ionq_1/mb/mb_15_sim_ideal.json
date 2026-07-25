@@ -1,0 +1,13 @@
+{
+  "benchmark": "MerminBell",
+  "experiment": "ionq_1",
+  "n_qubits": 15,
+  "backend": "ionq_simulator",
+  "noise_model": null,
+  "shots": 2000,
+  "job_id": "019f7b6a-ad32-71dc-afbc-4f2cc79e1a59",
+  "timestamp": "2026-07-19T13:27:02.177707",
+  "counts": {
+    "100000000000000": 2000
+  }
+}

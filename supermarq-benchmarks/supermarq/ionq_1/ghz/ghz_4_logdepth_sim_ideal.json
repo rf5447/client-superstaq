@@ -1,0 +1,15 @@
+{
+  "benchmark": "GHZ",
+  "experiment": "ionq_1",
+  "n_qubits": 4,
+  "method": "logdepth",
+  "backend": "ionq_simulator",
+  "noise_model": null,
+  "shots": 2000,
+  "job_id": "019f7870-29d1-7324-9a51-cab65a13cae9",
+  "timestamp": "2026-07-18T23:34:10.034742",
+  "counts": {
+    "0000": 954,
+    "1111": 1046
+  }
+}

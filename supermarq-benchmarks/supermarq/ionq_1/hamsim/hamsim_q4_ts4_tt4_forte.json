@@ -1,0 +1,20 @@
+{
+  "benchmark": "HamiltonianSimulation",
+  "experiment": "ionq_1",
+  "n_qubits": 4,
+  "steps": 4,
+  "ts": 4,
+  "tt": 4,
+  "backend": "qpu.forte-1",
+  "noise_model": null,
+  "shots": 2000,
+  "job_id": "019f7d82-b0a3-75fd-892a-21afb9b915a5",
+  "timestamp": "2026-07-19T23:18:30.352106",
+  "counts": {
+    "1111": 1955,
+    "1011": 14,
+    "1101": 13,
+    "0111": 9,
+    "1110": 9
+  }
+}

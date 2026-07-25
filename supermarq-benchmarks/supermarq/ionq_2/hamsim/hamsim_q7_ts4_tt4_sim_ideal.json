@@ -1,0 +1,16 @@
+{
+  "benchmark": "HamiltonianSimulation",
+  "experiment": "ionq_2",
+  "n_qubits": 7,
+  "steps": 4,
+  "ts": 4,
+  "tt": 4,
+  "backend": "ionq_simulator",
+  "noise_model": null,
+  "shots": 2000,
+  "job_id": "019f7b92-b4c4-757f-8880-1916707ef48b",
+  "timestamp": "2026-07-19T14:10:45.534281",
+  "counts": {
+    "1111111": 2000
+  }
+}
