@@ -1,0 +1,26 @@
+{
+  "benchmark": "VQEProxy",
+  "experiment": "ionq_2",
+  "n_qubits": 4,
+  "n_layers": 2,
+  "basis": "z",
+  "backend": "ionq_simulator",
+  "noise_model": null,
+  "shots": 2000,
+  "job_id": "01a017b4-f97f-749b-b163-1fb4ee316a40",
+  "timestamp": "2026-08-18T21:48:57.445021",
+  "counts": {
+    "0000": 1470,
+    "0001": 104,
+    "0010": 135,
+    "0011": 9,
+    "0100": 113,
+    "0101": 12,
+    "0110": 7,
+    "1000": 119,
+    "1001": 9,
+    "1010": 5,
+    "1100": 16,
+    "1110": 1
+  }
+}
